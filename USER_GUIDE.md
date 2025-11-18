@@ -32,23 +32,23 @@
 
 ### Commande nmap (IP cible)
 
-![CMD_nmap](Ressources/CMD_nmap.PNG)
+![CMD_nmap](Ressources/nmap/CMD_nmap.PNG)
 
 * Avec cette commande vous lancerez un scan des 1000 ports les plus courants, des informations apparaîtrons :
 
 * Le nom de la machine cible (Nom + IP)
   
-![CMD_nmap_détail_nom](Ressources/CMD_nmap_détail_nom.PNG)
+![CMD_nmap_détail_nom](Ressources/nmap/CMD_nmap_détail_nom.PNG)
 
 * Les informations sur les 1000 ports :
 
-![CMD_nmap_détail_ports](Ressources/CMD_nmap_détail_ports.PNG)
+![CMD_nmap_détail_ports](Ressources/nmap/CMD_nmap_détail_ports.PNG)
 
 * Vous comprendrez alors que sur les 1000 ports 997 sont fermés et que 3 sont ouverts.
 
 ### Commande nmap (IP machine) /24
 
-| ![CMD_nmap_balayage](Ressources/CMD_nmap_balayage.PNG) | ![CMD_nmap_balayage_2](Ressources/CMD_nmap_balayage_2.PNG) |
+| ![CMD_nmap_balayage](Ressources/nmap/CMD_nmap_balayage.PNG) | ![CMD_nmap_balayage_2](Ressources/nmap/CMD_nmap_balayage_2.PNG) |
 | ------------------------------------------------------ | ---------------------------------------------------------- |
 
 * Avec cette commande vous lancerez un balayage du réseau pour savoir quelles machines (actives) sont connectées au réseau, ainsi que les ports ouverts sur les différentes machines.
@@ -84,15 +84,15 @@
 Le logiciel zenmap a la même utilité que le nmap, à la différence qu'il propose un service graphique.  
 Par exemple :
 
-| ![CMD_zenmap](Ressources/CMD_zenmap.PNG) |
+| ![CMD_zenmap](Ressources/zenmap/CMD_zenmap.PNG) |
 | ---------------------------------------- |
 * Commande classique comme avec nmap, vous pouvez cependant taper l'IP dans CIBLE et chosir le type de scan que vous voulez faire. La commande s'écrira toute seule.
 
-| ![résultat_CMD_zenmap](Ressources/résultat_CMD_zenmap.PNG) |
+| ![résultat_CMD_zenmap](Ressources/zenmap/résultat_CMD_zenmap.PNG) |
 | ---------------------------------------- |
 * Vous aurez ensuite le résultat du scan qui apparaîtra.
 
-| ![résultat_graphique_CMD_zenmap](Ressources/résultat_graphique_CMD_zenmap.PNG) |
+| ![résultat_graphique_CMD_zenmap](Ressources/zenmap/résultat_graphique_CMD_zenmap.PNG) |
 | ---------------------------------------- |
 * Vous aurez aussi la possibilité d'afficher la topologie du réseau (il n'est pas très grand). Ainsi que bien d'autres informations avec les outils qui vous sont proposés.
 
@@ -121,9 +121,9 @@ On obtient ainsi la liste complète des hôtes actifs sur le segment scanné, m�
 
 Les informations receuillies sont filtrables dans Zenmap selon l'hôte scanné ou les srevices découvert (affiche les ports correspondant)  :
 
-![capture1cmplet](Ressources/Capture_scan_complet1.png)
+![capture1cmplet](Ressources/zenmap/Capture_scan_complet1.png)
 
-![capture1cmplet](Ressources/Capture_scan_complet2.png)
+![capture1cmplet](Ressources/zenmap/Capture_scan_complet2.png)
 
 
 
@@ -141,7 +141,7 @@ Si l'on s'intéresse à notre machine sous Windows (172.16.10.10) On peut remarq
 
 |                                                    |                                                    |
 | -------------------------------------------------- | -------------------------------------------------- |
-| ![capture1cmplet](Ressources/Capture_scanZen3.png) | ![capture1cmplet](Ressources/Capture_scanZen4.png) |
+| ![capture1cmplet](Ressources/zenmap/Capture_scanZen3.png) | ![capture1cmplet](Ressources/zenmap/Capture_scanZen4.png) |
 
 
 Si l'on s'intéresse à notre machine sous Debian (172.16.10.6)
@@ -189,7 +189,7 @@ La machine va se connecter sur le port 1234 de la machine en écoute dont l'adre
 Il est alors possible possible de "chatter" via le terminal.
 
 
-![capture1](Ressources/Capture_1.png)
+![capture1](Ressources/netcat/Capture_1.png)
 
 ## Vérifier si un port est ouvert
 
@@ -208,19 +208,19 @@ Pour scanner une plage de port sur une plage définie :
 ici le scan va s'éffectuer sur les ports 1 à 140.
 Un message affichera la reussite si un port est ouvert.
 
-![capture2](Ressources/Capture_2.png)
+![capture2](Ressources/netcat/Capture_2.png)
 
 
 ## Transfert de fichier entre deux machines
 
 ### Sur la machine qui émet :
 
-|![CMD_netcat_echange](Ressources/CMD_netcat_echange.PNG)|
+|![CMD_netcat_echange](Ressources/netcat/CMD_netcat_echange.PNG)|
 | ------------------------------------------------------ |
 
 * La commande `nc -l -p 1234 < fichier_a_envoyer.txt` envoie le fichier choisi dans le port nouvellement ouvert.
 
-|![CMD_netcat_echange_4](Ressources/CMD_netcat_echange_4.PNG)|
+|![CMD_netcat_echange_4](Ressources/netcat/CMD_netcat_echange_4.PNG)|
 | ---------------------------------------------------------- |
 
 * Vous pouvez constater que le port est bien ouvert avec la commande `nmap (IP)`.
@@ -228,9 +228,9 @@ Un message affichera la reussite si un port est ouvert.
 
 ### Sur la machine qui reçoit :
 
-|![CMD_netcat_echange_2](Ressources/CMD_netcat_echange_2.PNG)|
+|![CMD_netcat_echange_2](Ressources/netcat/CMD_netcat_echange_2.PNG)|
 | ---------------------------------------------------------- |
-|![CMD_netcat_echange_3](Ressources/CMD_netcat_echange_3.PNG)|
+|![CMD_netcat_echange_3](Ressources/netcat/CMD_netcat_echange_3.PNG)|
 
 * La commande `nc 172.16.10.XXX 1234 > fichier_recu.txt` reçoit le fichier depuis le port ouvert.
 * Maintenant que la connexion a été établie d'autres echange peuvent être effectué.
@@ -248,7 +248,7 @@ Dans un premier temps nous choisisions le type de scan a effectuer puis renseign
 
 
 
-| ![scanscript2](Ressources/Scan_script2.png) | ![scanscript1](Ressources/Scan_script1.png) |
+| ![scanscript2](Ressources/nmap/Scan_script2.png) | ![scanscript1](Ressources/nmap/Scan_script1.png) |
 | ------------------------------------------ | ------------------------------------------ |
 
 Sur cet exemple nous lancons un scan discret sur la cible 172.10.10.10.
