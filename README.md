@@ -1,4 +1,4 @@
-|![Logo_nmap](Ressources/Logo_nmap.PNG)|![Logo_netcat](Ressources/Logo_netcat.PNG)|
+|![Logo_nmap](Ressources/idees_aides/Logo_nmap.PNG)|![Logo_netcat](Ressources/idees_aides/Logo_netcat.PNG)|
 | ------------------------------------ | ---------------------------------------- |
 
 ## Sommaire 
